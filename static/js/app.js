@@ -86,11 +86,8 @@ fetch('api/index.php', {
           html+="<option value='"+responseText[i].id+"'>"+responseText[i].category+"</option>"
         }
       }
-        $('#categoryedit').html(html);
         $('#category').html(html);
-        $('#categoryEditBoardSelect').html(html);
-        $('#categoryDeleteBoardSelect').html(html);
-        
+       
     });
 });
 }
@@ -126,29 +123,23 @@ function createDataRow(expense){
   
       const e = document.createElement.bind(document);
       const expenseRowEl = e('TR');
-
       const expenseTdTypeEl =e('TD');
       expenseTdTypeEl.textContent = expense.id;
       expenseRowEl.appendChild(expenseTdTypeEl);
-
       const expenseTdNameEl = e('TD');
       expenseTdNameEl.textContent = expense.category;
       expenseRowEl.appendChild(expenseTdNameEl);
-
       const expenseTdDateEl = e('TD');
       expenseTdDateEl.textContent = expense.amount;
       expenseRowEl.appendChild(expenseTdDateEl);
-
       const expenseTdAmountEl = e('TD');
       expenseTdAmountEl.textContent =  expense.buyingdate;
       expenseRowEl.appendChild(expenseTdAmountEl);
-
       const expenseTdOptionsEl = e('TD');
       const deleteAnchorEl = e('button');
       deleteAnchorEl.textContent = 'Delete';
       deleteAnchorEl.style.color='white';
       deleteAnchorEl.style.backgroundColor='#007bff';
-
       deleteAnchorEl.onclick = function(e){
         deleteExpense(expense)
         Expenses.reset();
