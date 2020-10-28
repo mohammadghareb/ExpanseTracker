@@ -1,0 +1,11 @@
+body {
+    background: url('../images/cool-background.jpg') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  #btn-primary{
+    background-color: #0d0 !important;
+    
+}
