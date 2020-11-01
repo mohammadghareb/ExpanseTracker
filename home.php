@@ -58,8 +58,6 @@ if (!$_SESSION['firstname']) {
 
 
 
-
-
 <form id='expensefor'>
 <div class="modal fade" id="expenseform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
